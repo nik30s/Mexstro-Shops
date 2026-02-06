@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mexstro – Robux Shop</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(180deg, #0b0b0b, #1a0000);
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 420px;
+      margin: auto;
+      background: #120000;
+      padding: 25px;
+      border-radius: 18px;
+      box-shadow: 0 0 25px rgba(255,0,0,0.25);
+    }
+
+    h1 {
+      color: #ff2a2a;
+      margin-bottom: 5px;
+    }
+
+    .subtitle {
+      color: #ffb3b3;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    input {
+      width: 85%;
+      padding: 12px;
+      font-size: 16px;
+      border-radius: 10px;
+      border: none;
+      outline: none;
+      margin-bottom: 10px;
+    }
+
+    button {
+      width: 90%;
+      padding: 14px;
+      background: #ff2a2a;
+      color: white;
+      border: none;
+      border-radius: 12px;
+      font-size: 16px;
+      font-weight: bold;
+      margin-top: 10px;
+      box-shadow: 0 0 15px rgba(255,0,0,0.5);
+      cursor: pointer;
+    }
+
+    .price {
+      margin-top: 15px;
+      font-size: 18px;
+      color: #ffffff;
+    }
+
+    a.tiktok {
+      display: block;
+      margin-top: 20px;
+      padding: 14px;
+      background: black;
+      color: #ff2a2a;
+      text-decoration: none;
+      border-radius: 12px;
+      font-weight: bold;
+      border: 2px solid #ff2a2a;
+    }
+
+    .rules {
+      margin-top: 25px;
+      background: #1a0000;
+      padding: 15px;
+      border-radius: 12px;
+      text-align: left;
+      font-size: 13px;
+      color: #ffd6d6;
+    }
+
+    footer {
+      margin-top: 15px;
+      font-size: 11px;
+      color: #999;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>Mexstro</h1>
+    <div class="subtitle">Robux via Game Pass • </div>
+
+    <input type="number" id="robux" placeholder="შეიყვანე Robux (Min 100)" min="100">
+
+    <button onclick="calc()">გამოთვალე ფასი</button>
+
+    <div class="price" id="price">ფასი: 0 ₾</div>
+
+    <!-- შეცვალე TikTok username -->
+    <a class="tiktok" href="https://www.tiktok.com/@mexstro_shop" target="_blank">
+      Order via TikTok
+    </a>
+
+    <div class="rules">
+      <strong>📜 Support Rules</strong><br><br>
+      • Roblox აჭრის <strong>20%</strong> Game Pass-ის დროს<br>
+      • Robux / თანხა <strong>არ ბრუნდება</strong><br>
+      • Refund <strong>ვერ მოხერხდება</strong><br>
+      • Delivery: 4-7 დღეში Pending
+    </div>
+  </div>
+
+  <footer>
+    Not affiliated with Roblox Corporation
+  </footer>
+
+  <script>
+    function calc() {
+      const r = document.getElementById("robux").value;
+      const price = (r / 100) * 1.40;
+      document.getElementById("price").innerText =
+        "ფასი: " + price.toFixed(2) + " ₾";
+    }
+  </script>
+
+</body>
+		</html>
